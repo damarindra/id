@@ -32,11 +32,11 @@
       <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
     
     
-      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
+      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
     
       <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
     
-      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
+      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
     
   </entry>
   
@@ -56,11 +56,11 @@
       <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
     
     
-      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
-    
       <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
     
       <category term="windows" scheme="http://damarindra.com/id/tags/windows/"/>
+    
+      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
     
   </entry>
   
