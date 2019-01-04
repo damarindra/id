@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Damar Indra">
+    <title>Hexo with Github Pages - Damar Indra</title>
+    <meta name="author" content="Damar Indra">
+    
+    
+        <link rel="icon" href="http://damarindra.com/id/assets/images/avatar.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/id/atom.xml">
+    
+    <meta name="description" content="Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo with Github Pages">
+<meta property="og:url" content="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/index.html">
+<meta property="og:site_name" content="Damar Indra">
+<meta property="og:description" content="Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/github_profile.jpg">
+<meta property="og:image" content="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/github_repo.jpg">
+<meta property="og:image" content="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/github_repo_2.jpg">
+<meta property="og:updated_time" content="2019-01-04T14:41:46.479Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo with Github Pages">
+<meta name="twitter:description" content="Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.">
+<meta name="twitter:image" content="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/github_profile.jpg">
+<meta name="twitter:creator" content="@damarind">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/id/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/id/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/id/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/id/assets/css/tranquilpeak.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-105267687-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/id/ ">Damar Indra</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=90" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/id/#about">
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=110" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Damar Indra</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>damarind@gmail.com</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/damarindra/" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://nirama-dama.deviantart.com" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-deviantart"></i>
+                        <span class="sidebar-button-desc">DeviantArt</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/damarind" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://www.facebook.com/damar.indera" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:damarind@gmail.com" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<!-- Want make Table of Content more good? activate this, but not working
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-Started-with-Hexo"><span class="toc-text">Getting Started with Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Hexo"><span class="toc-text">Install Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buat-project-Hexo-untuk-Github-Pages"><span class="toc-text">Buat project Hexo untuk Github Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buat-repository-di-Github"><span class="toc-text">Buat repository di Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jalankan-server-untuk-melihat-hasil-tampilan"><span class="toc-text">Jalankan server untuk melihat hasil tampilan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pro-Tip-Install-hexo-livereload-buat-otomatis-reload"><span class="toc-text">Pro Tip : Install hexo-livereload buat otomatis reload</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atur-informasi-untuk-blog-kamu"><span class="toc-text">Atur informasi untuk blog kamu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gunakan-Git-untuk-deploy"><span class="toc-text">Gunakan Git untuk deploy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pro-Tip-Selalu-jalankan-perintah-–watch"><span class="toc-text">Pro Tip : Selalu jalankan perintah –watch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buat-blog-post-baru"><span class="toc-text">Buat blog post baru</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cara-nulis-blog-post-gimana"><span class="toc-text">Cara nulis blog post gimana?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hapus-aja-hello-world-md"><span class="toc-text">Hapus aja hello-world.md</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-halaman-ke-github"><span class="toc-text">Deploy halaman ke github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ganti-tema"><span class="toc-text">Ganti tema</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buat-page-baru"><span class="toc-text">Buat page baru</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Persingkat-dengan-“Read-More”"><span class="toc-text">Persingkat dengan “Read More”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Udah-ah-gitu-aja-sih-Makasih"><span class="toc-text">Udah ah, gitu aja sih.. Makasih</span></a></li></ol></li></ol>
+  </div>
+
+
+-->
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Hexo with Github Pages
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-12-31T13:52:08+07:00">
+	
+		    Dec 31, 2018
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.</p>
+<a id="more"></a>
+<h2 id="Getting-Started-with-Hexo"><a href="#Getting-Started-with-Hexo" class="headerlink" title="Getting Started with Hexo"></a>Getting Started with Hexo</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><p>Aplikasi yang yang dibutuhkan ada dibawah. Silahkan install terlebih dahulu</p>
+<ol>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">NodeJS</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="external">Atom</a> (<em>Optional</em>)</li>
+<li><a href="http://cmder.net/" target="_blank" rel="external">Cmder</a> (<em>Optional</em>)</li>
+</ol>
+<h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p>Buka Cmd as Administrator, setelah jalankan perintah berikut</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<p>Tunggu sampai proses download selesai. Jika sudah selesai, kita bisa check version hexo yang terinstal pada komputer dengan menggunakan</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
+<p>Setelah menjalankan perintah diatas, akan keluar seperti tulisan berikut</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">hexo: 3.8.0</div><div class="line">hexo-cli: 1.1.0</div><div class="line">os: Windows_NT 10.0.17134 win32 x64</div><div class="line">http_parser: 2.8.0</div><div class="line">node: 10.15.0</div><div class="line">v8: 6.8.275.32-node.45</div><div class="line">uv: 1.23.2</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.15.0</div><div class="line">modules: 64</div><div class="line">nghttp2: 1.34.0</div><div class="line">napi: 3</div><div class="line">openssl: 1.1.0j</div><div class="line">icu: 62.1</div><div class="line">unicode: 11.0</div><div class="line">cldr: 33.1</div><div class="line">tz: 2018e</div></pre></td></tr></table></figure>
+<h3 id="Buat-project-Hexo-untuk-Github-Pages"><a href="#Buat-project-Hexo-untuk-Github-Pages" class="headerlink" title="Buat project Hexo untuk Github Pages"></a>Buat project Hexo untuk Github Pages</h3><p>Jalankan perintah berikut pada cmd. Untuk username, sesuaikan dengan username pada github kalian.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init username.github.io</div><div class="line">cd username.github.io</div><div class="line">npm install</div></pre></td></tr></table></figure>
+<h3 id="Buat-repository-di-Github"><a href="#Buat-repository-di-Github" class="headerlink" title="Buat repository di Github"></a>Buat repository di Github</h3><p>Buka <a href="github.com">Github</a>, klik profile yang berada di kanan atas. Pilih Your repositories.</p>
+<img src="/id/2018/12/31/Hexo-with-Github-Pages/github_profile.jpg" alt="Create A new Repository" title="Create A new Repository">
+<p>Klik tombol new untuk membuat repository baru</p>
+<img src="/id/2018/12/31/Hexo-with-Github-Pages/github_repo.jpg" alt="Create A new Repository" title="Create A new Repository">
+<p>Berikan nama repository kalian sesuai dengan nama username.github.io, sebagai contoh punya saya, usernamenya cgranule. Nama repositorynya yaitu cgranule.github.io. Ini contoh ya.. jangan ikut username punya saya. hehehe</p>
+<img src="/id/2018/12/31/Hexo-with-Github-Pages/github_repo_2.jpg" alt="Create A new Repository" title="Create A new Repository">
+<p>Setelah itu tinggal klik “Create Repository”</p>
+<h3 id="Jalankan-server-untuk-melihat-hasil-tampilan"><a href="#Jalankan-server-untuk-melihat-hasil-tampilan" class="headerlink" title="Jalankan server untuk melihat hasil tampilan"></a>Jalankan server untuk melihat hasil tampilan</h3><p>Jalankan perintah <code>hexo server</code>. Setelah itu buka browser kalian, dan buka link <code>localhost:4000</code></p>
+<h3 id="Pro-Tip-Install-hexo-livereload-buat-otomatis-reload"><a href="#Pro-Tip-Install-hexo-livereload-buat-otomatis-reload" class="headerlink" title="Pro Tip : Install hexo-livereload buat otomatis reload"></a>Pro Tip : Install hexo-livereload buat otomatis reload</h3><p>Jadi kalau kamu ngubah file, browser bakal otomatis ngereload sendiri. Jadi ngirit nekan tombol <em>F5</em>. Nih cara installnya</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-livereload --save</div></pre></td></tr></table></figure>
+<h3 id="Atur-informasi-untuk-blog-kamu"><a href="#Atur-informasi-untuk-blog-kamu" class="headerlink" title="Atur informasi untuk blog kamu"></a>Atur informasi untuk blog kamu</h3><p>Kalian bisa ubah isi dari file “_config.yml”. Didalam file tersebut, ada beberapa settingan, jadi sesuaikan aja dengan kebutuhan</p>
+<h3 id="Gunakan-Git-untuk-deploy"><a href="#Gunakan-Git-untuk-deploy" class="headerlink" title="Gunakan Git untuk deploy"></a>Gunakan Git untuk deploy</h3><p>Kalian harus install dulu sih plugin hexo-deployer-git. Jalanin aja perintah</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>Kalau udah, buka “_config.yml” nya, dibagian paling bawah, ada deployment, ubah deh settingannya, sesuaiin aja dengan punya kalian</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/damarindra/damarindra.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h3 id="Pro-Tip-Selalu-jalankan-perintah-–watch"><a href="#Pro-Tip-Selalu-jalankan-perintah-–watch" class="headerlink" title="Pro Tip : Selalu jalankan perintah –watch"></a>Pro Tip : Selalu jalankan perintah –watch</h3><p>Jadi, kamu buka satu cmd lagi, nah itu untuk jalanin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate --watch</div></pre></td></tr></table></figure>
+<p>Fungsinya, bakal otomatis generate lagi kalau ada perubahan file dalam folder projectmu.</p>
+<h3 id="Buat-blog-post-baru"><a href="#Buat-blog-post-baru" class="headerlink" title="Buat blog post baru"></a>Buat blog post baru</h3><p>Perintahnya kayak gini</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new post nama_post</div></pre></td></tr></table></figure>
+<h3 id="Cara-nulis-blog-post-gimana"><a href="#Cara-nulis-blog-post-gimana" class="headerlink" title="Cara nulis blog post gimana?"></a>Cara nulis blog post gimana?</h3><p>Kalau mau video, bisa lihat <a href="https://www.youtube.com/watch?v=FUYbGPAAKrA" target="_blank" rel="external">disini</a><br>Kalau mau berbasis text, bisa <a href="https://hexo.io/docs/helpers.html" target="_blank" rel="external">kesini</a> dan <a href="https://sourceforge.net/p/hexo/wiki/markdown_syntax/" target="_blank" rel="external">kesitu</a></p>
+<h3 id="Hapus-aja-hello-world-md"><a href="#Hapus-aja-hello-world-md" class="headerlink" title="Hapus aja hello-world.md"></a>Hapus aja hello-world.md</h3><p>Iya serius, hapus aja, udah ga fungsi.</p>
+<h3 id="Deploy-halaman-ke-github"><a href="#Deploy-halaman-ke-github" class="headerlink" title="Deploy halaman ke github"></a>Deploy halaman ke github</h3><p>Jalanin aja perintah ini</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>Kalau udah, huehuehue, coba buka blog kamu, kalau punya saya ya yang kalian buka ini damarindra.github.io, kalau punya kalian, sesuaiin dengan username kalian. username.github.io. getoh.</p>
+<h3 id="Ganti-tema"><a href="#Ganti-tema" class="headerlink" title="Ganti tema"></a>Ganti tema</h3><p>Cari dulu gih temanya <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">disitu</a>, kalau udah dapet download aja. Jangan lupa baca dokumentasinya.</p>
+<p>Kalau udah didownload, taruh file temanya di folder themes. Jangan lupa di _config.yml diganti themes nya jadi tema yang udah kamu download tadi, misal nih nama foldernya <strong>light</strong> jadi ngeditnya kayak gini</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http://hexo.io/plugins/</div><div class="line">## Themes: http://hexo.io/themes/</div><div class="line">theme: light</div></pre></td></tr></table></figure>
+<h3 id="Buat-page-baru"><a href="#Buat-page-baru" class="headerlink" title="Buat page baru"></a>Buat page baru</h3><p>Nah ini yang saya bingung dari awal, huehuehue, divideo juga saya bingung huehuehue. Jadi ada tipe page juga, contoh yang tipenya page itu about, links, dan semacamnya. Hahaha kalau mau implementasi about, tinggal jalanin aja perintah ini</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page about</div></pre></td></tr></table></figure>
+<p>kalau tema kalian supportnya yang aboutme, ya berarti perintahnya</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page aboutme</div></pre></td></tr></table></figure>
+<p>gitu sih. udah gampang, hahaha</p>
+<h3 id="Persingkat-dengan-“Read-More”"><a href="#Persingkat-dengan-“Read-More”" class="headerlink" title="Persingkat dengan “Read More”"></a>Persingkat dengan “Read More”</h3><p>tulis aja di blog kamu dengan tulisan ini <!-- more -->.</p>
+<h3 id="Udah-ah-gitu-aja-sih-Makasih"><a href="#Udah-ah-gitu-aja-sih-Makasih" class="headerlink" title="Udah ah, gitu aja sih.. Makasih"></a>Udah ah, gitu aja sih.. Makasih</h3><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/id/tags/Hexo/">Hexo</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+		<li class="post-action">
+		    
+			<a class="post-action-btn btn btn--disabled">
+		    
+			<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+			<i class="fa fa-angle-left"></i>
+		    </a>
+		</li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/id/2019/01/03/symlink-unity/"  data-tooltip="Menggunakan Symlink pada Project Unity">
+                
+                    <i class="fa fa-angle-right"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2019 Damar Indra. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+		<li class="post-action">
+		    
+			<a class="post-action-btn btn btn--disabled">
+		    
+			<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+			<i class="fa fa-angle-left"></i>
+		    </a>
+		</li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/id/2019/01/03/symlink-unity/"  data-tooltip="Menggunakan Symlink pada Project Unity">
+                
+                    <i class="fa fa-angle-right"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/">
+                    <i class="fa fa-google-plus"></i><span>Share on Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=110" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Damar Indra</h4>
+        
+            <div id="about-card-bio"><p>damarind@gmail.com</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Game Developer, Programmer, Artist</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Indonesia
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div id= "list-search" class="results">
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/id/assets/images/cover.gif');"></div>
+        <!--SCRIPTS-->
+<script src="/id/assets/js/jquery.js"></script>
+<script src="/id/assets/js/jquery.fancybox.js"></script>
+<script src="/id/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/id/assets/js/tranquilpeak.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+    </body>
+</html>

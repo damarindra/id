@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Damar Indra</title>
+  
+  
+  <link href="/id/atom.xml" rel="self"/>
+  
+  <link href="http://damarindra.com/id/"/>
+  <updated>2019-01-04T14:41:49.352Z</updated>
+  <id>http://damarindra.com/id/</id>
+  
+  <author>
+    <name>Damar Indra</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WoX, alternatif untuk aplikasi Alfred dan Launchy</title>
+    <link href="http://damarindra.com/id/2019/01/03/wox/"/>
+    <id>http://damarindra.com/id/2019/01/03/wox/</id>
+    <published>2019-01-03T12:13:52.000Z</published>
+    <updated>2019-01-04T14:41:49.352Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;WoX itu simplenya ya search gitu, kalau kalian pencet tombol windows, terus ngetik nama aplikasi.
+    
+    </summary>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
+    
+    
+      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
+    
+      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cmder? Commander? Command Prompt er? Apasih?</title>
+    <link href="http://damarindra.com/id/2019/01/03/cmder/"/>
+    <id>http://damarindra.com/id/2019/01/03/cmder/</id>
+    <published>2019-01-03T09:20:53.000Z</published>
+    <updated>2019-01-04T14:41:38.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Cmder itu ya semacam command prompt, tapi dengan fitur yang lebih banyak. Kalau kalian pernah menggunakan &lt;strong&gt;Linux&lt;/strong&gt; atau &lt;strong&gt;Mac OS&lt;/strong&gt;
+    
+    </summary>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
+    
+    
+      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
+    
+      <category term="windows" scheme="http://damarindra.com/id/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Menggunakan Symlink pada Project Unity</title>
+    <link href="http://damarindra.com/id/2019/01/03/symlink-unity/"/>
+    <id>http://damarindra.com/id/2019/01/03/symlink-unity/</id>
+    <published>2019-01-03T05:23:45.000Z</published>
+    <updated>2019-01-04T14:41:41.248Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;symlink digunakan untuk membuat link pada folder atau file. Pernahkah kalian buat sebuah shortcut?
+    
+    </summary>
+    
+      <category term="unity" scheme="http://damarindra.com/id/categories/unity/"/>
+    
+    
+      <category term="unity" scheme="http://damarindra.com/id/tags/unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo with Github Pages</title>
+    <link href="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/"/>
+    <id>http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/</id>
+    <published>2018-12-31T06:52:08.000Z</published>
+    <updated>2019-01-04T14:41:46.479Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://damarindra.com/id/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
