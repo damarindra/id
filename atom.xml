@@ -6,7 +6,7 @@
   <link href="/id/atom.xml" rel="self"/>
   
   <link href="http://damarindra.com/id/"/>
-  <updated>2019-01-04T14:41:49.352Z</updated>
+  <updated>2019-01-05T06:15:39.132Z</updated>
   <id>http://damarindra.com/id/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Clover - Solusi Tabbed File Explorer</title>
+    <link href="http://damarindra.com/id/2019/01/05/clover-windows/"/>
+    <id>http://damarindra.com/id/2019/01/05/clover-windows/</id>
+    <published>2019-01-05T05:35:35.000Z</published>
+    <updated>2019-01-05T06:15:39.132Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Pengguna linux pasti ga asing dengan File Manager yang ada tab nya. Iya kan? Pasti susah move on dari itu, jujur aja…
+    
+    </summary>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
+    
+    
+      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
+    
+      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
+    
+      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WoX, alternatif untuk aplikasi Alfred dan Launchy</title>
     <link href="http://damarindra.com/id/2019/01/03/wox/"/>
     <id>http://damarindra.com/id/2019/01/03/wox/</id>
     <published>2019-01-03T12:13:52.000Z</published>
-    <updated>2019-01-04T14:41:49.352Z</updated>
+    <updated>2019-01-05T06:15:38.017Z</updated>
     
     <summary type="html">
     
@@ -32,11 +56,11 @@
       <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
     
     
-      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
+      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
     
       <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
     
-      <category term="Windows" scheme="http://damarindra.com/id/tags/Windows/"/>
+      <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
     
   </entry>
   
@@ -45,7 +69,7 @@
     <link href="http://damarindra.com/id/2019/01/03/cmder/"/>
     <id>http://damarindra.com/id/2019/01/03/cmder/</id>
     <published>2019-01-03T09:20:53.000Z</published>
-    <updated>2019-01-04T14:41:38.080Z</updated>
+    <updated>2019-01-05T06:16:16.690Z</updated>
     
     <summary type="html">
     
@@ -56,11 +80,11 @@
       <category term="productivity" scheme="http://damarindra.com/id/categories/productivity/"/>
     
     
+      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
+    
       <category term="productivity" scheme="http://damarindra.com/id/tags/productivity/"/>
     
       <category term="windows" scheme="http://damarindra.com/id/tags/windows/"/>
-    
-      <category term="tools" scheme="http://damarindra.com/id/tags/tools/"/>
     
   </entry>
   
@@ -69,7 +93,7 @@
     <link href="http://damarindra.com/id/2019/01/03/symlink-unity/"/>
     <id>http://damarindra.com/id/2019/01/03/symlink-unity/</id>
     <published>2019-01-03T05:23:45.000Z</published>
-    <updated>2019-01-04T14:41:41.248Z</updated>
+    <updated>2019-01-05T06:19:45.821Z</updated>
     
     <summary type="html">
     
@@ -89,13 +113,15 @@
     <link href="http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/"/>
     <id>http://damarindra.com/id/2018/12/31/Hexo-with-Github-Pages/</id>
     <published>2018-12-31T06:52:08.000Z</published>
-    <updated>2019-01-04T14:41:46.479Z</updated>
+    <updated>2019-01-05T06:16:46.407Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;Hexo merupakan sebuah framework untuk membuat blog. Penggunaannya relatif simple, imo satu tingkat diatas wordpress lah untuk kerumitannya.&lt;/p&gt;
     
     </summary>
+    
+      <category term="Hexo" scheme="http://damarindra.com/id/categories/Hexo/"/>
     
     
       <category term="Hexo" scheme="http://damarindra.com/id/tags/Hexo/"/>
