@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Damar Indra">
+    <title>Enaknya bisa Unity Editor Scripting - Part 1 - Damar Indra</title>
+    <meta name="author" content="Damar Indra">
+    
+    
+        <link rel="icon" href="http://damarindra.com/id/assets/images/avatar.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/id/atom.xml">
+    
+    <meta name="description" content="Pernah ga sih kalian sebel dengan workflow yang lama? Misal kalian pengen menata gameobject yang berantakan jadi rapi.">
+<meta name="keywords" content="unity,editor">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Enaknya bisa Unity Editor Scripting - Part 1">
+<meta property="og:url" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/index.html">
+<meta property="og:site_name" content="Damar Indra">
+<meta property="og:description" content="Pernah ga sih kalian sebel dengan workflow yang lama? Misal kalian pengen menata gameobject yang berantakan jadi rapi.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/nature-pack-extended.JPG">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/berantakan.JPG">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/tatanan-gameobject.JPG">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/arrange-GO.JPG">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/hasil-1.JPG">
+<meta property="og:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/hasil-2.JPG">
+<meta property="og:updated_time" content="2019-01-05T13:40:09.747Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enaknya bisa Unity Editor Scripting - Part 1">
+<meta name="twitter:description" content="Pernah ga sih kalian sebel dengan workflow yang lama? Misal kalian pengen menata gameobject yang berantakan jadi rapi.">
+<meta name="twitter:image" content="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/nature-pack-extended.JPG">
+<meta name="twitter:creator" content="@damarind">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/id/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/id/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/id/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/id/assets/css/tranquilpeak.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-105267687-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/id/ ">Damar Indra</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=90" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/id/#about">
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=110" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Damar Indra</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>damarind@gmail.com</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/damarindra/" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://nirama-dama.deviantart.com" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-deviantart"></i>
+                        <span class="sidebar-button-desc">DeviantArt</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/damarind" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://www.facebook.com/damar.indera" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-facebook"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:damarind@gmail.com" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/id/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<!-- Want make Table of Content more good? activate this, but not working
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Kasih-Gambaran-luasnya-dulu-deh-masih-ga-paham"><span class="toc-text">Kasih Gambaran luasnya dulu deh, masih ga paham</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Langsung-Bikin-script-aja-ya"><span class="toc-text">Langsung Bikin script aja ya?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dipisah-menjadi-2-Script"><span class="toc-text">Dipisah menjadi 2 Script</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Digabung-jadi-1-Script"><span class="toc-text">Digabung jadi 1 Script</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Udah-nih-sekarang-bikin-triggernya-kan"><span class="toc-text">Udah nih, sekarang bikin triggernya kan?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implementasinya-gimana-nih"><span class="toc-text">Implementasinya gimana nih?</span></a></li></ol>
+  </div>
+
+
+-->
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Enaknya bisa Unity Editor Scripting - Part 1
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2019-01-05T15:42:28+07:00">
+	
+		    Jan 05, 2019
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/id/categories/unity/">unity</a>
+
+
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Kasih-Gambaran-luasnya-dulu-deh-masih-ga-paham"><span class="toc-text">Kasih Gambaran luasnya dulu deh, masih ga paham</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Langsung-Bikin-script-aja-ya"><span class="toc-text">Langsung Bikin script aja ya?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dipisah-menjadi-2-Script"><span class="toc-text">Dipisah menjadi 2 Script</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Digabung-jadi-1-Script"><span class="toc-text">Digabung jadi 1 Script</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Udah-nih-sekarang-bikin-triggernya-kan"><span class="toc-text">Udah nih, sekarang bikin triggernya kan?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Implementasinya-gimana-nih"><span class="toc-text">Implementasinya gimana nih?</span></a></li></ol>
+<p>Pernah ga sih kalian sebel dengan workflow yang lama? Misal kalian pengen menata gameobject yang berantakan jadi rapi. <a id="more"></a>Contoh lah kita pake asset <strong>Kenney</strong> nih, download aja <a href="https://kenney.nl/assets/nature-pack-extended" target="_blank" rel="external">disini</a></p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/nature-pack-extended.JPG" alt="Kenney Assets" title="Kenney Assets">
+<p>Kalau kalian import di unity dan drag ke scene, hasilnya seperti ini nih</p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/berantakan.JPG" alt="Berantakan" title="Berantakan">
+<p>Kan, ga rapi, iya ga? Dia hanya ada di satu tempat aja, ga nyebar rapi gitu… Kalian mau ngerapiin kah? Kalau penulis sih males, hahaha</p>
+<h3 id="Kasih-Gambaran-luasnya-dulu-deh-masih-ga-paham"><a href="#Kasih-Gambaran-luasnya-dulu-deh-masih-ga-paham" class="headerlink" title="Kasih Gambaran luasnya dulu deh, masih ga paham"></a>Kasih Gambaran luasnya dulu deh, masih ga paham</h3><p>Okay, kalian harus tau dulu nih, tentang <strong>Editor Scripting</strong>. Kalian kalau bikin script, kan biasanya otomatis ada ini kan</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> UnityEngine;</div></pre></td></tr></table></figure>
+<p>Iya kan? nah itu gunanya untuk bikin game ya… <strong>MonoBehaviour</strong> ya dari namespace <strong>UnityEngine</strong> itu. Makanya kalian bisa pake <em>Update</em>, <em>Start</em>, <em>OnTriggerEnter</em> dan lainnya ya karena <strong>UnityEngine</strong> ini. Termasuk bisa memasang script di GameObject ya karena ini.</p>
+<p>Nah kalau untuk <strong>Editor Scripting</strong> itu kita harus tambahin ini</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> UnityEditor;</div></pre></td></tr></table></figure>
+<p>Jadi kalau mau ngembangin Unity Editornya buat mempermudah pembuatan game, <strong>UnityEditor</strong> lah yang dapat membantu kalian.</p>
+<h3 id="Langsung-Bikin-script-aja-ya"><a href="#Langsung-Bikin-script-aja-ya" class="headerlink" title="Langsung Bikin script aja ya?"></a>Langsung Bikin script aja ya?</h3><p>Yap, langsung aja bikin scriptnya. Eitss, untuk membuat editor script ada 2 cara, yang pertama caranya dipisah 2 script, yang kedua 1 script tapi pakai symbol.</p>
+<h4 id="Dipisah-menjadi-2-Script"><a href="#Dipisah-menjadi-2-Script" class="headerlink" title="Dipisah menjadi 2 Script"></a>Dipisah menjadi 2 Script</h4><p>Cara 2 script merupakan cara yang sering digunakan oleh developer, ini mungkin standartnya sih. Jadi ada 1 script yang nanti derivednya itu MonoBehaviour, dan satu lagi yang derived nya Editor. Script yang derived nya Editor, harus masuk ke dalam folder dengan nama <em>Editor</em>.</p>
+<h4 id="Digabung-jadi-1-Script"><a href="#Digabung-jadi-1-Script" class="headerlink" title="Digabung jadi 1 Script"></a>Digabung jadi 1 Script</h4><p>Cara ini bisa digunakan kalau isi scriptnya masih simple, seperti tutorial kali ini. Kalau kompleks, saya rekomendasi pake 2 file saja. Jadi untuk tutorial ini, saya gabung jadi 1 file saja. Scriptnya harus diluar folder <em>Editor</em> dan class yang derivednya <code>Editor</code> harus dikasih symbol <code>UNITY_EDITOR</code>. Kalau tidak kalian beri symbol, saya jamin game kalian ga bakal bisa dibuild / compile. Anggapannya sih, <code>UnityEditor</code> ga dikenali compiler ketika proses build.</p>
+<p>Kita pake cara yang digabung jadi 1 script ya. Langsung aja buat script, namanya <strong>ArrangeGameObject.cs</strong>. Sekarang kita buka scriptnya, ubah seperti berikut</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> System.Collections;</div><div class="line"><span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><span class="keyword">using</span> UnityEngine;</div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> UNITY_EDITOR</span></div><div class="line"><span class="keyword">using</span> UnityEditor;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ArrangeGameObject</span> : <span class="title">MonoBehaviour</span></div><div class="line">&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> UNITY_EDITOR</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ArrangeGameObjectEditor</span> : <span class="title">Editor</span></div><div class="line">&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<p>Oke kita bahas satu-satu.</p>
+<p><strong>#if UNITY_EDITOR dan #endif</strong><br>Ini digunakan untuk membatasi kode untuk editor saja. Jadi bakal aman ketika kita export.</p>
+<p><strong>class yang “derived” dari Editor</strong><br>Nah bagi kalian nih yang baru aja kenal Editor Scripting, <em>“derived”</em> classnya bisa pake <strong>Editor</strong> nih. Ini bisa untuk ngakses kita ke inspector nantinya, jadi kita bisa tuh modifikasi inspectornya. Niatnya nanti bakal ada satu tombol, ketika diklik akan menata semua gameobjectnya.</p>
+<p>Udah paham? Lanjut dulu dengan nambah koding, didalam class <code>ArrangeGameObject</code>, kalian buat 2 variable untuk menentukan gridnya sama lebarnya. Kalau mau ngerapihin kan harus ada aturannya kan? Grid ini untuk mengatur penempatan GameObjectnya, widthnya untuk pindah linenya, gitu. Jadi langsung aja tambahin ini</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> Vector2 grid = Vector2.one * <span class="number">2</span>;</div><div class="line"><span class="keyword">public</span> <span class="keyword">int</span> width = <span class="number">10</span>;</div></pre></td></tr></table></figure>
+<div class="alert info no-icon"><p>Kalian bisa atur aja valuenya, sesuai kebutuhan kalian sih.</p>
+</div>
+<h3 id="Udah-nih-sekarang-bikin-triggernya-kan"><a href="#Udah-nih-sekarang-bikin-triggernya-kan" class="headerlink" title="Udah nih, sekarang bikin triggernya kan?"></a>Udah nih, sekarang bikin triggernya kan?</h3><p>Triggernya bisa pakai button, jadi ketika kita tekan tombolnya, nanti langsung otomatis ngatur posisi GameObjectnya sesuai dengan gridnya. Aturannya gini, scriptnya nanti dipasang di suatu GameObject, yang mana mempunyai banyak child. Child ini nanti bakal kita atur secara otomatis sesuai grid. Paham ya? Sekarang tambahkan script berikut di class <code>ArrangeGameObjectEditor</code></p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ArrangeGameObject ago;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnEnable</span>(<span class="params"></span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	ago = (ArrangeGameObject)target;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Saya jelasin bentar nih. <code>ArrangeGameObject ago</code> ini merupakan jembatan untuk komunikasi. Masih ingat kan kita punya variable <code>Vector2 grid</code>? Untuk komunikasinya, kita butuh <code>ArrangeGameObject</code>. Untuk mengisi variable <code>ago</code>, kita gunakan <code>OnEnable</code>, diisi dengan <code>target</code>, yang mana bisa kita cast ke <code>ArrangeGameObject</code>.</p>
+<p>Setelah itu, kita tambahkan kode berikut</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInspectorGUI</span>(<span class="params"></span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">base</span>.OnInspectorGUI();</div><div class="line">	<span class="keyword">if</span> (GUILayout.Button(<span class="string">"Arrange Childs"</span>))</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ago.transform.childCount; i++)</div><div class="line">		&#123;</div><div class="line">			ago.transform.GetChild(i).localPosition = <span class="keyword">new</span> Vector3((i % ago.width) * ago.grid.x, <span class="number">0</span>, (i / ago.width) * ago.grid.y);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>OnInspectorGUI</code> merupakan fungsi untuk memodifikasi tampilan <em>Inspector</em> pada unity.  <code>base.OnInspectorGUI</code> itu pemanggilan default tampilan inspector. Kalau tidak dipanggil, default inspector ga akan tampil. Biasanya tidak dipanggil ketika kita mau ubah semua tampilan inspectornya. <code>if(GUILayout.Button(&quot;Arrange Childs&quot;))</code> untuk menampilkan button dan kalau ditekan tombolnya akan mengembalikan nilai <strong>true</strong>. Didalam kondisi button, merupakan koding untuk menata posisi GameObjectnya.</p>
+<h3 id="Implementasinya-gimana-nih"><a href="#Implementasinya-gimana-nih" class="headerlink" title="Implementasinya gimana nih?"></a>Implementasinya gimana nih?</h3><p>Di unity, kita bikin satu <strong>Empty GameObject</strong>, ubah namanya menjadi <strong>ArrangeGO</strong>. Pilih semua GameObject yang akan kita atur posisinya sesuai grid, masukin ke <strong>ArrangeGO</strong> tadi. Jadinya kayak gini nanti,</p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/tatanan-gameobject.JPG" alt="Implementasi" title="Implementasi">
+<p>Tambahkan script tadi <strong>ArrangeGameObject.cs</strong> ke <strong>Empty GameObject</strong> yang mana parent dari banyak GameObject tadi.</p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/arrange-GO.JPG" alt="Implementasi" title="Implementasi">
+<p>Tekan aja tombol “Arrange Childs”, hasilnya nanti kurang lebih seperti ini.</p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/hasil-1.JPG" alt="Implementasi" title="Implementasi">
+<p>Hasilnya bakal otomatis rapi kan? Sesuai sama <strong>grid</strong> dan <strong>width</strong> nya. Tapi kalau penulis lihat nih, masih terlalu berdempetan antara satu dan lainnya. Saya ubah gridnya menjadi (4, 4), terus saya arrange sekali lagi, hasilnya seperti ini</p>
+<img src="/id/2019/01/05/unity-editor-scripting-1/hasil-2.JPG" alt="Implementasi" title="Implementasi">
+<p>Nah, kalau ini sudah rapi nih. Kalau sudah kayak gini, tinggal level design aja, hehehe. Script lengkapnya ada <a href="https://gist.github.com/damarindra/0c7812c2c0fee77a22416441fee37581" target="_blank" rel="external">disitu</a>. Awkay, jadi seperti itu ya, Matur Thank you…</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/id/tags/editor/">editor</a> <a class="tag tag--primary tag--small t-link" href="/id/tags/unity/">unity</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+		<li class="post-action">
+		    
+			<a class="post-action-btn btn btn--default tooltip--top" href="/id/2019/01/05/clover-windows/" data-tooltip="Clover - Solusi Tabbed File Explorer">
+		    
+			<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+			<i class="fa fa-angle-left"></i>
+		    </a>
+		</li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-right"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2019 Damar Indra. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+		<li class="post-action">
+		    
+			<a class="post-action-btn btn btn--default tooltip--top" href="/id/2019/01/05/clover-windows/" data-tooltip="Clover - Solusi Tabbed File Explorer">
+		    
+			<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+			<i class="fa fa-angle-left"></i>
+		    </a>
+		</li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-right"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/">
+                    <i class="fa fa-google-plus"></i><span>Share on Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://www.gravatar.com/avatar/dfe6ee574d2885e5aa8a3565180d9647?s=110" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Damar Indra</h4>
+        
+            <div id="about-card-bio"><p>damarind@gmail.com</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Game Developer, Programmer, Artist</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Indonesia
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div id= "list-search" class="results">
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/id/assets/images/cover.gif');"></div>
+        <!--SCRIPTS-->
+<script src="/id/assets/js/jquery.js"></script>
+<script src="/id/assets/js/jquery.fancybox.js"></script>
+<script src="/id/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/id/assets/js/tranquilpeak.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+    </body>
+</html>

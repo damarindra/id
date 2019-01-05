@@ -6,7 +6,7 @@
   <link href="/id/atom.xml" rel="self"/>
   
   <link href="http://damarindra.com/id/"/>
-  <updated>2019-01-05T06:15:39.132Z</updated>
+  <updated>2019-01-05T13:40:09.747Z</updated>
   <id>http://damarindra.com/id/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Enaknya bisa Unity Editor Scripting - Part 1</title>
+    <link href="http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/"/>
+    <id>http://damarindra.com/id/2019/01/05/unity-editor-scripting-1/</id>
+    <published>2019-01-05T08:42:28.000Z</published>
+    <updated>2019-01-05T13:40:09.747Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- toc --&gt;
+&lt;p&gt;Pernah ga sih kalian sebel dengan workflow yang lama? Misal kalian pengen menata gameobject yang berantakan jadi rapi.
+    
+    </summary>
+    
+      <category term="unity" scheme="http://damarindra.com/id/categories/unity/"/>
+    
+    
+      <category term="unity" scheme="http://damarindra.com/id/tags/unity/"/>
+    
+      <category term="editor" scheme="http://damarindra.com/id/tags/editor/"/>
+    
+  </entry>
   
   <entry>
     <title>Clover - Solusi Tabbed File Explorer</title>
